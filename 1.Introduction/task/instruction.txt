@@ -1,0 +1,8 @@
+Сбор образа:
+docker build -t test_image:latest . 
+
+Запуск контейнера:
+docker run --rm -d -p 5432:5432 -v /data:/var/lib/postgresql/data --name test_container test_image:latest
+
+Подключение к работающему контейнеру:
+docker exec -it test_container psql -U username -d database

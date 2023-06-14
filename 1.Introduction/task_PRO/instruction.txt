@@ -1,0 +1,17 @@
+Запуск проекта:
+	docker compose up -d
+
+Перезапуск проекта:
+	docker compose restart
+
+Остановка проекта:
+	docker compose down
+
+Подключение к базе данных:
+	docker exec -it task2-db-1 psql -U postgres
+
+Логи с результатами выполнения python-скрипта:
+	docker logs task2-app-1
+
+Перезапуск расчета python-скрипта:
+	docker restart task2-app-1
